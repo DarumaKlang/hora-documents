@@ -1,5 +1,6 @@
 import React from 'react';
-import { LuFileSignature, LuGem, LuCrown, LuCalendarCheck, LuBook } from 'react-icons/lu';
+// ตัวอย่างการแก้ไข
+import { LuFileDigit, LuGem, LuCrown, LuCalendarCheck, LuBook } from 'react-icons/lu';
 import { BiSearchAlt } from 'react-icons/bi';
 
 interface MenuItemProps {
@@ -24,7 +25,7 @@ const Sidebar: React.FC = () => {
       </div>
       <nav>
         <MenuItem icon={<BiSearchAlt size={20} />} text="วิเคราะห์ชื่อ-นามสกุล" />
-        <MenuItem icon={<LuFileSignature size={20} />} text="ค้นหาชื่อดี-นามมงคล" />
+        <MenuItem icon={<LuFileDigit size={20} />} text="ค้นหาชื่อดี-นามมงคล" />
         <MenuItem icon={<LuCrown size={20} />} text="ตั้งชื่อลูกชาย-ลูกสาว" />
         <MenuItem icon={<LuGem size={20} />} text="ดูดวงชะตากำเนิด" />
         <MenuItem icon={<LuCalendarCheck size={20} />} text="ดูดวงชะตารายเดือนรายสัปดาห์" />
