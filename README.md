@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# โครงการพัฒนาเว็บไซต์ โหราศาสตร์ไทยดิจิทัล
 
-## Getting Started
+ยินดีต้อนรับสู่โครงการพัฒนาเว็บไซต์โหราศาสตร์ไทยดิจิทัล! โครงการนี้มีจุดมุ่งหมายเพื่อเป็นศูนย์กลางความรู้และเครื่องมือสำหรับผู้ที่สนใจและนักพัฒนาในวงการโหราศาสตร์ไทย
 
-First, run the development server:
+## เกี่ยวกับเรา
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+เราคือกลุ่มผู้หลงใหลในวิชาโหราศาสตร์ไทย ที่มุ่งมั่นจะสร้างสรรค์พื้นที่แห่งการเรียนรู้และการพัฒนาที่ทันสมัย เว็บไซต์เอกสารนี้จึงถือกำเนิดขึ้นเพื่อเป็น **แหล่งอ้างอิงข้อมูลการพยากรณ์ที่เป็นกลางและถูกต้อง** โดยรวบรวมหลักการและตำราต่างๆ ไว้ในรูปแบบดิจิทัล เพื่อให้ทุกคนเข้าถึงได้ง่ายและนำไปใช้เป็นแนวทางเดียวกัน
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+นอกจากนี้ เรายังได้นำเทคโนโลยีเข้ามาประยุกต์ใช้เพื่อเปิดโอกาสให้ผู้สนใจและนักพัฒนาได้ **ร่วมทดสอบและพัฒนาเครื่องมือพยากรณ์ดิจิทัล** ไปพร้อมกัน
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## เทคโนโลยีที่ใช้
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+โปรเจกต์นี้พัฒนาขึ้นโดยใช้เทคโนโลยีหลักดังนี้:
 
-## Learn More
+* **Next.js:** สำหรับการสร้างส่วนหน้า (Frontend) ที่มีประสิทธิภาพสูง
+* **TypeScript:** เพื่อความแม่นยำและลดข้อผิดพลาดในการเขียนโค้ด
+* **Tailwind CSS:** สำหรับการออกแบบและจัดรูปแบบหน้าเว็บอย่างรวดเร็ว
+* **PostgreSQL:** ฐานข้อมูลหลักสำหรับจัดเก็บข้อมูล
+* **Docker Compose:** สำหรับการจัดการสภาพแวดล้อมการทำงานของแอปพลิเคชัน
 
-To learn more about Next.js, take a look at the following resources:
+## การติดตั้งและใช้งาน
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ข้อกำหนดเบื้องต้น
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+ตรวจสอบให้แน่ใจว่าคุณได้ติดตั้งซอฟต์แวร์เหล่านี้เรียบร้อยแล้ว:
 
-## Deploy on Vercel
+* Node.js (LTS)
+* Docker และ Docker Compose
+* Yarn หรือ npm
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### การเริ่มต้น
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1.  โคลน (Clone) โปรเจกต์นี้:
+    ```bash
+    git clone https://github.com/DarumaKlang/hora-documents.git
+
+    cd hora-documents
+    ```
+
+2.  ติดตั้ง Dependencies ทั้งหมด:
+    ```bash
+    npm install 
+    # หรือ
+    yarn
+    ```
+
+3.  ตั้งค่าไฟล์ `.env` (หากมี) โดยดูจากตัวอย่าง `.env.example`
+
+4.  รัน Docker Compose เพื่อเริ่มต้นบริการต่างๆ:
+    ```bash
+    docker-compose up -d
+    ```
+
+5.  รันโปรเจกต์ Next.js:
+    ```bash
+    npm run dev
+    # หรือ
+    yarn dev
+    ```
+
+โปรเจกต์จะเริ่มทำงานที่ `http://localhost:3000`
+
+## โครงสร้างโปรเจกต์
+
+* `src/app/`: โฟลเดอร์หลักสำหรับ App Router ของ Next.js
+* `src/components/`: คอมโพเนนต์ React ที่นำมาใช้ซ้ำได้
+* `src/pages/`: (หากใช้ Pages Router)
+* `src/styles/globals.css`: ไฟล์ CSS หลักที่ใช้สำหรับสไตล์ทั่วไป
+* `docker-compose.yml`: ไฟล์สำหรับจัดการคอนเทนเนอร์ Docker
+* `README.md`: ไฟล์เอกสารนี้
+
+## การมีส่วนร่วม
+
+เรายินดีต้อนรับนักพัฒนา ผู้เชี่ยวชาญ และผู้สนใจทุกท่านที่ต้องการร่วมสร้างสรรค์โปรเจกต์นี้ หากคุณมีข้อเสนอแนะหรือพบปัญหา สามารถเปิด Issue หรือส่ง Pull Request ได้ทันที
+
+มาร่วมกันสร้าง **จุดกึ่งกลาง** ให้วงการโหราศาสตร์ไทยมีแนวทางที่มั่นคงและยั่งยืนในยุคดิจิทัล!
+
+---
+© 2025 By DevG
