@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
-import MainPage from '@/components/MainPage';
+import AboutUs from '@/components/AboutUs';
 import Footer from '@/components/Footer';
 
-export default function Home() {
+export default function About() {
     return (
         <div className="min-h-screen bg-teal-100 font-sans">
             <Header />
@@ -15,7 +15,7 @@ export default function Home() {
                 </div>
                 {/* Main Content Section */}
                 <div className="w-full">
-                    <MainPage />
+                    <AboutUs />
                 </div>
             </div>
             <Footer />

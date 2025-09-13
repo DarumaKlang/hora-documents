@@ -55,7 +55,7 @@ const ReportTable = () => (
 const MainContent = () => {
     return (
         <div className="p-6 bg-white rounded-lg shadow-md mt-4 md:mt-0 flex-1">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">บริการของเรา</h2>
+            <h2 className="text-2xl font-bold text-teal-800 mb-6">บริการของเรา</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <ServicePackageCard
