@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
-import Contents from '@/components/Client/Contents';
 import Footer from '@/components/Footer';
+// import คอมโพแนนท์ from '@/components/คอมโพแนนท์ ที่ต้องการใช้งาน; --- IGNORE ---
 
-export default function ContentsPage() {
+export default function Informations() {
     return (
         <div className="min-h-screen bg-teal-100 font-sans">
             <Header />
@@ -15,7 +15,7 @@ export default function ContentsPage() {
                 </div>
                 {/* Main Content Section */}
                 <div className="w-full">
-                    <Contents />
+                    {/* เนื้อหาที่ต้องการแสดงผล */}
                 </div>
             </div>
             <Footer />

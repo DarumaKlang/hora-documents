@@ -1,4 +1,4 @@
-// src/components/Home.tsx
+// components/MainPage.tsx
 import React from 'react';
 import { LuFileText } from 'react-icons/lu'; // ใช้ icon ที่คุณต้องการ
 import { BiSearchAlt } from 'react-icons/bi';

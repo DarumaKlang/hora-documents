@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
-import AboutUs from '@/components/AboutUs';
+import InformationComponent from '@/components/Developers/InformationComponent';
 import Footer from '@/components/Footer';
 
-export default function Informations() {
+export default function InformationsPage() {
     return (
         <div className="min-h-screen bg-teal-100 font-sans">
             <Header />
@@ -15,7 +15,7 @@ export default function Informations() {
                 </div>
                 {/* Main Content Section */}
                 <div className="w-full">
-                    <AboutUs />
+                    <InformationComponent />
                 </div>
             </div>
             <Footer />

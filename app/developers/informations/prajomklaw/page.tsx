@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
-import Contents from '@/components/Client/Contents';
+import PrajomklawDataComponent from '@/components/Developers/PrajomklawDataComponent';
 import Footer from '@/components/Footer';
 
-export default function ContentsPage() {
+export default function InformationsPage() {
     return (
         <div className="min-h-screen bg-teal-100 font-sans">
             <Header />
@@ -15,7 +15,7 @@ export default function ContentsPage() {
                 </div>
                 {/* Main Content Section */}
                 <div className="w-full">
-                    <Contents />
+                    <PrajomklawDataComponent />
                 </div>
             </div>
             <Footer />
