@@ -20,8 +20,8 @@ export const informationData = [
         link: "/developers/lnbits-connect"
     },
     {
-        title: "บทความจากชุมชนนักพัฒนา",
-        description: "ติดตามข่าวสารและบทความล่าสุดจากเว็บบอร์ด Discourse",
-        link: "http://localhost:30000"
+        title: "เกี่ยวกับเว็บไซต์",
+        description: "การกำหนดค่าทั่วไป",
+        link: "/developers/informations/global"
     }
 ];

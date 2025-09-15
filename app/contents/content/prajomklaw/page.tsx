@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from 'react';
-import Header from '@/components/Header';
+import Header from '@/components/Global/Header';
 import Sidebar from '@/components/Sidebar';
 import PrajomklawComponent from '@/components/Developers/PrajomklawComponent';
-import Footer from '@/components/Footer';
+import Footer from '@/components/Global/Footer';
 
 export default function PrajomklawPage() {
     return (

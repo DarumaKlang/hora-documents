@@ -1,24 +1,11 @@
 import React from 'react';
-import Header from '@/components/Header';
-import Sidebar from '@/components/Sidebar';
-import Contents from '@/components/Client/Contents';
-import Footer from '@/components/Footer';
+import DefaultLayout from '@/components/layouts/DefaultLayout';
+import Contents from '@/components/Contents/Contents';
 
 export default function ContentsPage() {
     return (
-        <div className="min-h-screen bg-teal-100 font-sans">
-            <Header />
-            <div className="container mx-auto p-4 md:flex md:space-x-4">
-                {/* Sidebar Section */}
-                <div className="w-full md:w-1/3">
-                    <Sidebar />
-                </div>
-                {/* Main Content Section */}
-                <div className="w-full">
-                    <Contents />
-                </div>
-            </div>
-            <Footer />
-        </div>
+        <DefaultLayout>
+            <Contents />
+        </DefaultLayout>
     );
 }

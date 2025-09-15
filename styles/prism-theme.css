@@ -1,36 +1,7 @@
-@import "tailwindcss";
-
-/* 3. วางโค้ด CSS ของโปรเจกต์คุณเองไว้ล่างสุด */
-:root {
-    --background: #A9B87F;
-    --foreground: #0e7490;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #A9B87F;
-        --foreground: #0e7490;
-    }
-}
-
-body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 /* 1. วางโค้ด PrismJS และการปรับแต่งทั้งหมดไว้ที่นี่ */
-.token.comment, .token.prolog, .token.doctype, .token.cdata {
-  color: #8292a2;
-}
-
-.token.punctuation, .token.punctuation.colon, .token.punctuation.generic {
-  color: #f8f8f2;
-}
-
 code[class*="language-"],
 pre[class*="language-"] {
-    color: #C7E4C5;
+    color: #f8f8f2;
     background: none;
     text-shadow: 0 1px rgba(0, 0, 0, .3);
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -55,7 +26,7 @@ pre[class*="language-"] {
     margin: .5em 0;
     overflow: auto;
     border-radius: .3em;
-    background: #002B36;
+    background: #272822;
     /* Background for the code block */
 }
 

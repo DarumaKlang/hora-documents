@@ -1,24 +1,11 @@
 import React from 'react';
-import Header from '@/components/Header';
-import Sidebar from '@/components/Sidebar';
+import DefaultLayout from '@/components/layouts/DefaultLayout';
 import PrajomklawDataComponent from '@/components/Developers/PrajomklawDataComponent';
-import Footer from '@/components/Footer';
 
-export default function InformationsPage() {
+export default function PrajomklawPage() {
     return (
-        <div className="min-h-screen bg-teal-100 font-sans">
-            <Header />
-            <div className="container mx-auto p-4 md:flex md:space-x-4">
-                {/* Sidebar Section */}
-                <div className="w-full md:w-1/3">
-                    <Sidebar />
-                </div>
-                {/* Main Content Section */}
-                <div className="w-full">
-                    <PrajomklawDataComponent />
-                </div>
-            </div>
-            <Footer />
-        </div>
+        <DefaultLayout>
+            <PrajomklawDataComponent />
+        </DefaultLayout>
     );
 }
