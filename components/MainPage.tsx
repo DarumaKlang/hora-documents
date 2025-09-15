@@ -1,6 +1,6 @@
 // components/MainPage.tsx
 import React from 'react';
-import ServicePackageCard from './Global/ServicePackageCard';
+import ServicePackageCard from './Globaly/ServicePackageCard';
 import { LuFileText } from 'react-icons/lu'; // ใช้ icon ที่คุณต้องการ
 import { BiSearchAlt } from 'react-icons/bi';
 

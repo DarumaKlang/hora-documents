@@ -19,7 +19,7 @@ import {
 } from 'react-icons/lu';
 import { BiSearchAlt } from 'react-icons/bi';
 import { FaGithub } from 'react-icons/fa'; 
-import DonationsPopup from '@/components/Global/DonationsPopup';
+import DonationsPopup from '@/components/Globaly/DonationsPopup';
 import { useState } from 'react';
 
 interface MenuItemProps {

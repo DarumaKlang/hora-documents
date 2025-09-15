@@ -1,12 +1,12 @@
-// components/Client/Developers/Components/MainPageDevComponent.tsx
-'use client';
-
+// components/Developers/ApisComponent/ApiDataServiceComponent.tsx
 import React from 'react';
 import CodeBlock from '@/components/Developers/CodeBlock';
 
-const ApiDataServiceComponent = () => {
-    // กำหนด string ของโค้ดสำหรับแต่ละบล็อก
-    const TaksaDataCode = `{
+interface ApiDataServiceComponent {
+    title: string;
+}
+
+const TaksaDataCode = `{
     "mahataksa": [
         {
         "day": "อาทิตย์ (๑)",
@@ -76,7 +76,7 @@ const ApiDataServiceComponent = () => {
     }
 }`;
 
-    const TaksaServiceCode = `async function fetchMahataksaData() {
+const TaksaServiceCode = `async function fetchMahataksaData() {
     try {
         const response = await fetch('/api/mahataksa');
         if (!response.ok) {
@@ -92,21 +92,101 @@ const ApiDataServiceComponent = () => {
 
 fetchMahataksaData();`;
 
-    return (
-        <div className="p-6 bg-white rounded-lg shadow-md my-4 md:mt-0">
-            <h2 className="text-2xl font-bold text-teal-800 mb-6">ข้อมูลมหาทักษา</h2>
+const PrajomklawDataCode = `[
+    {
+        "remainder": 1,
+        "verse": "เศษ 1 เสาเรือนไฟไหม้ ชะตาร้ายทั้งชายหญิง\nไร้เรือนที่พึ่งพิง ที่พึ่งพักสำนักเนา\nจะร่อนเร่ระเหระหน เร่งเจียมตนอย่าดูเบา\nเพราะว่าชะตาเรา โทษประกอบจึงเกิดกรรม"
+    },
+    {
+        "remainder": 2,
+        "verse": "เศษ 2 จะครองไข้ มีโรคภัยสิงประจำ\nหยูกยาจะหาทำ บ่ถูกแท้จนแก่ตาย"
+    },
+    {
+        "remainder": 3,
+        "verse": "เศษ 3 ความสบาย มีข้าควายและเกวียนวัว\nพอสมสกุลตัว เท่าที่ทายสถานกลาง"
+    },
+    {
+        "remainder": 4,
+        "verse": "เศษ 4 มีข้าครอก อเนกนอกคนานาง\nอุปถัมภ์ล้วนสำอาง บ่ไข้ชุกบ่ทุกข์เป็น"
+    },
+    {
+        "remainder": 5,
+        "verse": "เศษ 5 ชะตากลับ ทุนทรัพย์จะแสนเข็ญ\nภายหลังชะตาเป็น ทุนทรัพย์นับอนันต์"
+    },
+    {
+        "remainder": 6,
+        "verse": "เศษ 6 จะยกญาติ เป็นเชื้อชาติประเสริฐสรรค์\nเงินตรายศถาพลัน ทุนทรัพย์ลำดับมี"
+    },
+    {
+        "remainder": 7,
+        "verse": "เศษ 7 นั้นผ้าขาด จะนุ่งห่มก็เต็มที\nภัตราย่อมราคี ระคายคับทั้งทรัพย์สิน"
+    },
+    {
+        "remainder": 8,
+        "verse": "เศษ 8 จะเปรื่องยศ จะปรากฏในแผ่นดิน\nทรัพย์ศฤงคารสถานถิ่น ทั้งอำนาจและวาสนา"
+    },
+    {
+        "remainder": 9,
+        "verse": "เศษ 9 กินข้าวกลางตลาด เสมอชาติสุนัขา\nถึงจะมีวาสนา ต้องประกอบทำงานการ\nเปรียบตระกูลวณิพก ถึงต่ำตกก็บ่นาน\nดั่งนักเลงสุราบาน พอขวนขวายใส่ท้องตน"
+    },
+    {
+        "remainder": 0,
+        "verse": "เศษ 10 (0) ดังนกแขกเต้า ทำรวงรังไว้บังฝน\nแสวงดีย่อมมีผล อย่าคลุกเคล้ากับเหล่าพาล\nเหมือนปักษีอันมีปีก รู้หลบหลีกธนูพราน\nถ้าประมาทจะเสียการ ถึงชอกช้ำระกำกาย"
+    }
+]`;
 
-            <div className="flex flex-col md:flex-row items-center md:items-start mb-6">
-                
+const PrajomklawServiceCode = `async function fetchPrajomklawData() {
+    try {
+        const response = await fetch('/api/prajomklaw');
+        if (!response.ok) {
+            // เปลี่ยน backtick เป็น single หรือ double quote
+            throw new Error('HTTP error! status: ' + response.status); 
+        }
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Failed to fetch Prajomklaw data:', error);
+    }
+}
+
+fetchPrajomklawData();`;
+
+const ApiDataServiceComponent: React.FC<ApiDataServiceComponent> = ({ title }) => {
+    return (
+        <div className="p-6 bg-white rounded-lg shadow-md mt-4 md:mt-0 flex-1">
+            <h2 className="text-2xl font-bold text-teal-800 mb-4">{title}</h2>
+            <div className="text-gray-600">
+                <h2 className="text-sm mb-6">ส่วนนี้จะเป็นส่วนในการให้บริการข้อมูล API</h2>
+
+                <p className="text-xl font-bold text-teal-800 my-3">API ข้อมูลทักษา :</p>
+
                 <div>
-                    <h3 className="text-xl font-bold text-teal-800 mb-6">API Example</h3>
-                    <CodeBlock code={TaksaServiceCode} language="typescript" />
-                    <h3 className="text-xl font-bold text-teal-800 my-6">API DATA</h3>
+                    {/* ใช้ CodeBlock component เพื่อแสดงโค้ด */}
                     <CodeBlock code={TaksaDataCode} language="typescript" />
                 </div>
 
-            </div>
+                <p className="text-xl font-bold text-teal-800 my-3">ตัวอย่างการเรียกใช้งาน API :</p>
 
+                <div>
+                    {/* ใช้ CodeBlock component เพื่อแสดงโค้ด */}
+                    <CodeBlock code={TaksaServiceCode} language="typescript" />
+                </div>
+
+                <p className="text-xl font-bold text-teal-800 my-3">API ข้อมูลคำทำนายเศษพระจอมเกล้า :</p>
+
+                <div>
+                    {/* ใช้ CodeBlock component เพื่อแสดงโค้ด */}
+                    <CodeBlock code={PrajomklawDataCode} language="typescript" />
+                </div>
+
+                <p className="text-xl font-bold text-teal-800 my-3">ตัวอย่างการเรียกใช้งาน API :</p>
+
+                <div>
+                    {/* ใช้ CodeBlock component เพื่อแสดงโค้ด */}
+                    <CodeBlock code={PrajomklawServiceCode} language="typescript" />
+                </div>
+
+            </div>
         </div>
     );
 };

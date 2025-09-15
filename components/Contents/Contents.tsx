@@ -30,13 +30,13 @@ const Contents: React.FC = () => {
             title: "ตำรับเศษพระจอมเกล้า",
             description: "คำทำนายเศษพระจอมเกล้า",
             icon: <BiSearchAlt size={40} />,
-            linkTo: "/contents/prajomklaw"
+            linkTo: "/contents/content/prajomklaw"
         },
         {
-            title: "ค้นหาชื่อดี-นามมงคล",
-            description: "ค้นหาชื่อที่เหมาะกับดวงชะตาและส่งเสริมชีวิต",
+            title: "ตำรามหาทักษาพยากรณ์",
+            description: "ข้อมูลตำรามหาทักษา",
             icon: <LuFileDigit size={40} />,
-            linkTo: "/contents/find-auspicious-name"
+            linkTo: "/contents/content/mahataksa"
         },
         {
             title: "ตั้งชื่อลูกชาย-ลูกสาว",

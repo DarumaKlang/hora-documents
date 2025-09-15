@@ -1,6 +1,7 @@
 import React from 'react';
 import DefaultLayout from '@/components/layouts/DefaultLayout';
 import { LuFileText } from 'react-icons/lu';
+import ComponentsComponent from '@/components/Developers/ComponentsComponent/ComponentsComponent';
 
 export default function Components() {
     return (
@@ -22,6 +23,9 @@ export default function Components() {
                             การใช้ TypeScript ร่วมกับการสร้าง Components ช่วยให้คุณกำหนดโครงสร้างข้อมูลที่ชัดเจน ลดข้อผิดพลาดที่อาจเกิดขึ้น และทำให้ทีมพัฒนามีแนวทางในการทำงานที่เป็นมาตรฐานมากขึ้น
                         </p>
                     </div>
+                </div>
+                <div>
+                    <ComponentsComponent />
                 </div>
             </div>
         </DefaultLayout>
