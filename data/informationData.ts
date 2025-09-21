@@ -10,14 +10,14 @@ export const informationData = [
         link: "/developers/informations/mahataksa"
     },
     {
-        title: "Docker Compose สำหรับนักพัฒนา",
-        description: "ทำความเข้าใจการใช้งาน Docker Compose สำหรับเว็บเซิร์ฟเวอร์, PostgreSQL, และ Discourse",
-        link: "/developers/docker"
+        title: "พฤกษาชาตา",
+        description: "“ลัคนาคือต้นไม่ใหญ่” ในการเปรียบเทียบดวงชะตาในจักรราศี",
+        link: "/developers/informations/treeshata"
     },
     {
-        title: "การเชื่อมต่อ LNbits UI กับ LND",
-        description: "ศึกษาขั้นตอนการเชื่อมต่อ Next.js UI เข้ากับ LNbits และ LND Node",
-        link: "/developers/lnbits-connect"
+        title: "ดิถีฤกษ์ไชย",
+        description: "“ ดิถีฤกษ์ไชย ” วันดี และ ไม่ดี นับตามดิถีขึ้น/แรม",
+        link: "/developers/informations/luckyday"
     },
     {
         title: "เกี่ยวกับเว็บไซต์",

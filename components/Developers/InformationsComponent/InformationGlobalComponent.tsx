@@ -1,6 +1,7 @@
 // components/Developers/InformationGlobalComponent.tsx
 import React from 'react';
 import CodeBlock from '@/components/Developers/CodeBlock';
+import AstroIcons from '@/components/Developers/AstroIcons';
 
 interface InformationGlobalComponent {
     title: string;
@@ -146,6 +147,10 @@ const InformationGlobalComponent: React.FC<InformationGlobalComponent> = ({ titl
                 <div>
                     {/* ใช้ CodeBlock component เพื่อแสดงโค้ด */}
                     <CodeBlock code={DefaultCard} language="typescript" />
+                </div>
+
+                <div>
+                    <AstroIcons />
                 </div>
 
             </div>
