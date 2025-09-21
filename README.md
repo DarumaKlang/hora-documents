@@ -73,6 +73,12 @@
 
 ```bash
 npm install react-syntax-highlighter
+
+npm install prismjs
+
+npm install astronomia astronomy-engine autoprefixer luxon @types/luxon --latest
+
+npm install @types/luxon --latest
 ```
 
 ## การมีส่วนร่วม

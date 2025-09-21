@@ -8,16 +8,21 @@
     "start": "next start"
   },
   "dependencies": {
+    "astronomia": "^4.2.0",
+    "astronomy-engine": "^2.1.19",
+    "autoprefixer": "^10.4.21",
+    "luxon": "^3.7.2",
     "next": "15.5.2",
     "prismjs": "^1.30.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-icon": "^1.0.0",
     "react-icons": "^5.5.0",
-    "react-syntax-highlighter": "^5.8.0"
+    "react-syntax-highlighter": "^15.6.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/luxon": "^3.7.1",
     "@types/node": "^20",
     "@types/prismjs": "^1.26.5",
     "@types/react": "^19",
