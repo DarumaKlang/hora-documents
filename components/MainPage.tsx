@@ -6,6 +6,8 @@ import YamaAthaganClock from './Developers/YamaAthaganClock';
 import TaksaDropdown from "@/components/Developers/TaksaPakornDataComponent";
 import { LuFileText } from 'react-icons/lu'; // หากใช้
 import { BiSearchAlt } from 'react-icons/bi'; // หากใช้
+import LandscapeTable from '@/components/Developers/LandscapeTable';
+import CurrentDayCard from '@/components/Developers/CurrentDayCard';
 
 // ข้อมูลสำหรับ ServicePackageCard
 const servicePackages = [
@@ -51,13 +53,13 @@ const MainPage = () => {
                 <div className="flex-1">
                     <YamaAthaganClock />
                 </div>
-                {/* ตัวอย่างการใช้ Card Component ที่ยังไม่ได้สร้าง */}
+
+                <div className="flex-1">
+                    <CurrentDayCard />
+                </div>
+
                 <div className="flex-1">
                     <TaksaDropdown />
-                </div>
-                <div className="flex-1 p-4 bg-gray-100 rounded-lg shadow-inner">
-                    <h3 className="text-xl font-semibold">Card Component</h3>
-                    <p className="mt-2 text-gray-600">รายละเอียดเพิ่มเติมสำหรับ Card component 2</p>
                 </div>
             </div>
 

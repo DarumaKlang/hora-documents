@@ -105,7 +105,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     <MenuItem href="/contents/sevennum" icon={<LuFileDigit size={20} />} text="พยากรณ์เลข ๗ ตัว" />
                     <MenuItem href="/contents/jakrasri" icon={<LuCrown size={20} />} text="พยากรณ์จักราศี" />
                     <MenuItem href="/contents/yamathaglan" icon={<LuGem size={20} />} text="นาฬิกายามอัฐกาล" />
-                    <MenuItem href="/contents/lukanaonline" icon={<LuCalendarCheck size={20} />} text="ตรวจสอบลัคนาออนไลน์" />
+                    <MenuItem href="/contents/starcountdown" icon={<LuCalendarCheck size={20} />} text="นับถอยหลังการย้ายราศี" />
                     <MenuItem href="/contents/content" icon={<LuBook size={20} />} text="บทความดูดวง" />
                 </nav>
 
