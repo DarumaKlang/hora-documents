@@ -15,9 +15,9 @@ import UranusCountdown from './Planets/UranusCountdown';
 
 const CountdownCard: React.FC = () => {
     return (
-        <div className="bg-white backdrop-blur-md p-8 rounded-lg shadow-xl text-teal-800 flex flex-col h-full w-full">
+        <div className="bg-white backdrop-blur-md p-8 rounded-lg shadow-xl text-teal-800 flex flex-col w-full">
             <h2 className="text-2xl font-bold text-teal-800 mb-6">
-                เวลานับถอยหลังการย้ายราศี
+                นาฬิกานับถอยหลังดาวย้ายราศี
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <SunCountdown />

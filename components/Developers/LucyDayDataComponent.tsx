@@ -26,19 +26,19 @@ const LuckyDayData: React.FC<LuckyDayDataProps> = ({ title }) => {
     };
 
     return (
-        <div className="p-6 bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl shadow-xl mt-4 md:mt-0 flex-1">
+        <div className="p-6 bg-white rounded-2xl shadow-xl mt-4 md:mt-0 flex-1">
             <h2 className="text-3xl font-extrabold text-teal-800 mb-6 text-center">{title}</h2>
             <div className="text-gray-700">
                 <div className="mb-6">
-                    <label htmlFor="day-select" className="block text-lg font-semibold text-gray-800 mb-2">
-                        เลือกวัน:
+                    <label htmlFor="day-select" className="block text-md font-semibold text-gray-800 mb-2">
+                        เลือกวัน ข้างขึ้น-ข้างแรม :
                     </label>
                     <div className="relative">
                         <select
                             id="day-select"
                             value={selectedDay}
                             onChange={handleSelectChange}
-                            className="block w-full px-4 py-3 text-lg text-gray-900 border border-teal-300 rounded-full bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent appearance-none"
+                            className="block w-full px-4 py-3 text-md text-gray-900 border border-teal-300 rounded-full bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent appearance-none"
                         >
                             <option value="">-- กรุณาเลือกวัน --</option>
                             {luckyDayData.map((data, index) => (

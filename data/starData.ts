@@ -145,6 +145,9 @@ export const planetsData: Planet[] = [
         id: 'uranus',
         name: 'ดาวมฤตยู',
         transits: [
+            { sign: 'ราศีพฤษภ', targetDate: '2022-07-07T00:00:00' },
+            { sign: 'ราศีเมษ', targetDate: '2022-12-01T15:11:00' },
+            { sign: 'ราศีพฤษภ', targetDate: '2023-03-08T21:44:00' },
             { sign: 'ราศีมิถุน', targetDate: '2029-07-18T18:18:00' },
             { sign: 'ราศีกรกฎ', targetDate: '2036-08-06T00:45:00' },
             { sign: 'ราศีสิงห์', targetDate: '2043-08-28T18:53:00' },
