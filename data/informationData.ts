@@ -1,5 +1,10 @@
 export const informationData = [
     {
+        title: "ตำราพิชัยสงคราม",
+        description: "21 กลยุทธ์ในตำราพิชัยสงคราม",
+        link: "/developers/informations/21strategy"
+    },
+    {
         title: "ตำรับเศษพระจอมเกล้า",
         description: "หลักการพยากรณ์ที่สืบทอดจากพระบาทสมเด็จพระจอมเกล้าเจ้าอยู่หัว",
         link: "/developers/informations/prajomklaw"
