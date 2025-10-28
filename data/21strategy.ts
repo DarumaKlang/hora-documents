@@ -1,7 +1,7 @@
 // data/21strategy.ts
 
 /**
- * Interface สำหรับโครงสร้างข้อมูลของแต่ละกลยุทธ์
+ * Interface สำหรับโครงสร้างข้อมูลของแต่ละกลยุทธ
  */
 export interface Strategy {
     number: number;
@@ -32,7 +32,7 @@ export const CONDITION_NOTES: string[] = [
     "กาลี ๖ ศุกร์ : เงื่อนไขเพื่อ 'ความรัก' 'คนรัก' (เช่น สงครามเพราะเจ็บใจคนรักโดนรังแก) **Ex: ข้าจะเผาเมืองแปรให้วอดวาย**",
 ];
 
-// ข้อมูลหลักของ 21 กลยุทธ์
+// ข้อมูลหลักของ 21 กลยุทธ
 export const STRATEGIES: Strategy[] = [
     {
         number: 1,
@@ -52,7 +52,7 @@ export const STRATEGIES: Strategy[] = [
     {
         number: 3,
         title: 'ลักษณะซ่อนเงื่อน: ฝึกฝนชำนาญ',
-        description: '(แบบลับ ๆ) เป็นพื้นฐานกลยุทธ์วิธี',
+        description: '(แบบลับ ๆ) เป็นพื้นฐานกลยุทธวิธี',
         prakasit: 'มรณะ - ราศีพิจิก',
         stars: '⭐️🏠 ๓',
         notes: ['นายทหาร เสธ: วางแผนการรบ️'],

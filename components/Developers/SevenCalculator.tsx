@@ -44,7 +44,7 @@ const ZODIAC_YEARS = [
     { label: 'ปีมะโรง (งูใหญ่) - 5', value: 5, type: '7-Base' },
     { label: 'ปีมะเส็ง (งูเล็ก) - 6', value: 6, type: '7-Base' },
     { label: 'ปีมะเมีย (ม้า) - 7', value: 7, type: '7-Base' },
-    
+
     { label: 'ปีมะแม (แพะ) - 1', value: 1, type: '5-Base' },
     { label: 'ปีวอก (ลิง) - 2', value: 2, type: '5-Base' },
     { label: 'ปีระกา (ไก่) - 3', value: 3, type: '5-Base' },
@@ -59,19 +59,19 @@ const ZODIAC_YEARS = [
 
 // ฐานที่ ๑: ฤทธี / อัตตะ...
 const BASE_1_TEXT: string[] = [
-    'ฤทธี / อัตตะ', 'เถื่อนกำบัง / หินะ', 'พวนเรือโยง / ธะนัง', 'ฟ้างำดิน / ปิตา', 
+    'ฤทธี / อัตตะ', 'เถื่อนกำบัง / หินะ', 'พวนเรือโยง / ธะนัง', 'ฟ้างำดิน / ปิตา',
     'ชูพิษแสลง / มาตา', 'เย้าให้ผอม / โภคา', 'ฟ้าสนั่นเสียง / มัฌฌิมา'
 ];
 
 // ฐานที่ ๒: สีหจักร / ตนุ...
 const BASE_2_TEXT: string[] = [
-    'สีหจักร / ตนุ', 'พังภูผา / กดุมภะ', 'พวนเรือโยง / สหัชชะ', 'อินทร์พิมาน / พันธุ', 
+    'สีหจักร / ตนุ', 'พังภูผา / กดุมภะ', 'พวนเรือโยง / สหัชชะ', 'อินทร์พิมาน / พันธุ',
     'แข็งให้อ่อน / ปุตตะ', 'จอมปราสาท / อริ', 'เรียงหลักยืน / ปัตนิ'
 ];
 
 // ฐานที่ ๓: ลักษณ์ซ่อนเงื่อน / มรณะ...
 const BASE_3_TEXT: string[] = [
-    'ลักษณ์ซ่อนเงื่อน / มรณะ', 'ม้ากินสวน / ศุภะ', 'ล่อช้างป่า / กำมะ', 'ผลาญศัตรู / ลาภะ', 
+    'ลักษณ์ซ่อนเงื่อน / มรณะ', 'ม้ากินสวน / ศุภะ', 'ล่อช้างป่า / กำมะ', 'ผลาญศัตรู / ลาภะ',
     'ยอนภูเขา / พยายะ', 'ราชปัญญา / ทาสี', 'ปืนพระราม / ทาสา'
 ];
 
@@ -100,15 +100,15 @@ const generateSevenCycleRow = (startValue: number | null, fixedText: string[]): 
     for (let i = 0; i < 7; i++) {
         // สูตรการวนรอบ: (startValue + i - 1) % 7 + 1
         const value = (startValue + i - 1) % 7 + 1;
-        
+
         const isStartCell = i === 0;
         const subText = fixedText[i]; // ข้อความตายตัวตาม Index (C1, C2, ...)
 
         row.push(
             // ปรับ Padding: Mobile: p-0, Desktop: sm:p-1
-            <div key={i} className="flex flex-col items-center justify-center p-0 sm:p-1"> 
+            <div key={i} className="flex flex-col items-center justify-center p-0 sm:p-1">
                 {/* ตัวเลขที่วนรอบ: Mobile: text-xs, Desktop: sm:text-lg */}
-                <span 
+                <span
                     className={`text-xs sm:text-lg font-bold ${isStartCell ? 'text-teal-700 underline decoration-2 decoration-teal-500' : 'text-gray-800'}`}
                 >
                     {value}
@@ -182,44 +182,58 @@ const SevenCalculatorComponent: React.FC<SevenCalculatorProps> = ({ title }) => 
     return (
         <div className="p-6 bg-white rounded-lg shadow-md flex-1">
             <h2 className="text-2xl font-bold text-teal-800 mb-6 border-b pb-4 border-gray-200">{title} </h2>
-            
+
             <div className="grid md:grid-cols-3 gap-6 mb-8">
                 {/* 1. Dropdown ฐานที่ ๑ */}
-                <Dropdown 
+                <Dropdown
                     id="day-select"
-                    label="  วันในสัปดาห์ (ฐานที่ ๑)" 
-                    options={DAYS_OF_WEEK} 
+                    label="  วันในสัปดาห์ (ฐานที่ ๑)"
+                    options={DAYS_OF_WEEK}
                     value={selectedDayValue}
                     onChange={setSelectedDayValue}
                 />
-                
+
                 {/* 2. Dropdown ฐานที่ ๒ */}
-                <Dropdown 
+                <Dropdown
                     id="month-select"
-                    label="  เดือนไทย (ฐานที่ ๒)" 
-                    options={THAI_MONTHS} 
+                    label="  เดือนไทย (ฐานที่ ๒)"
+                    options={THAI_MONTHS}
                     value={selectedMonthValue}
                     onChange={setSelectedMonthValue}
                 />
 
                 {/* 3. Dropdown ฐานที่ ๓ */}
-                <Dropdown 
+                <Dropdown
                     id="zodiac-select"
-                    label="  ปีนักษัตร (ฐานที่ ๓)" 
-                    options={ZODIAC_YEARS} 
+                    label="  ปีนักษัตร (ฐานที่ ๓)"
+                    options={ZODIAC_YEARS}
                     value={selectedZodiacValue}
                     onChange={setSelectedZodiacValue}
                 />
             </div>
-            
+
             {/* ส่วนแสดงตาราง 7x3 พร้อมค่าตัวเลขที่เลือกใน C1 และการวนรอบ 7 ใน C2-C7 */}
-            <SevenTableComponent 
-                title="ตารางค่าตัวเลข 7 ฐาน (การวนรอบทักษา)"
+            <SevenTableComponent
+                title="ตำราพิชัยสงคราม ๒๑ กลยุทธ์เลข ๗ ตัว"
                 headers={tableHeaders}
                 rowLabels={tableRowLabels}
                 data={tableData}
                 className="mt-6"
             />
+
+            <div className="mt-6 p-4 bg-teal-50 rounded-lg border border-teal-200">
+                <h3 className="text-lg font-semibold text-teal-700 mb-2">หลักในการทำนายตามตําราพิชัยสงคราม</h3>
+                <p className="text-gray-800 text-sm leading-relaxed">
+                    <strong>หลัก 1 :</strong> เป็นพื้นฐานกลยุทธ์ทั้งหมด<br />
+                    <strong>หลัก 2 :</strong> มีทรัพยากร<br />
+                    <strong>หลัก 3 :</strong> ผูกมิตร<br />
+                    <strong>หลัก 4 :</strong> หลักการพูด หลักการปกครอง<br />
+                    <strong>หลัก 5 :</strong> หลักข้อมูล ข่าวสาร<br />
+                    <strong>หลัก 6 :</strong> หลักทรัพย์สิน การใช้ความมงคล มีเป็นปัจจัย หลักโชว์ออฟ แสนยานุภาพ<br />
+                    <strong>หลัก 7 :</strong> หลักการถอย ถึงคราวถอยก็ต้องถอย
+                </p>
+            </div>
+
         </div>
     );
 };
