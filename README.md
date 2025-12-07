@@ -30,28 +30,32 @@
 
 ### การเริ่มต้น
 
-1.  โคลน (Clone) โปรเจกต์นี้:
+1. โคลน (Clone) โปรเจกต์นี้:
+
     ```bash
     git clone https://github.com/DarumaKlang/hora-documents.git
 
     cd hora-documents
     ```
 
-2.  ติดตั้ง Dependencies ทั้งหมด:
+2. ติดตั้ง Dependencies ทั้งหมด:
+
     ```bash
     npm install 
     # หรือ
     yarn
     ```
 
-3.  ตั้งค่าไฟล์ `.env` (หากมี) โดยดูจากตัวอย่าง `.env.example`
+3. ตั้งค่าไฟล์ `.env` (หากมี) โดยดูจากตัวอย่าง `.env.example`
 
-4.  รัน Docker Compose เพื่อเริ่มต้นบริการต่างๆ:
+4. รัน Docker Compose เพื่อเริ่มต้นบริการต่างๆ:
+
     ```bash
     docker-compose up -d
     ```
 
-5.  รันโปรเจกต์ Next.js:
+5. รันโปรเจกต์ Next.js:
+
     ```bash
     npm run dev
     # หรือ
