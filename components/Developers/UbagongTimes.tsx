@@ -49,7 +49,7 @@ const symbolMap: { [key: string]: { icon: JSX.Element; color: string; } } = {
     '⠑': { icon: <FaCircle />, color: 'text-blue-500' },
     '⠂': { icon: <FaSquareFull />, color: 'text-orange-500' },
     'X': { icon: <FaTimes />, color: 'text-red-500' },
-    ' ': { icon: null, color: 'text-gray-500' },
+    ' ': { icon: <></>, color: 'text-gray-500' },
 };
 
 const ubagongPoem = [
